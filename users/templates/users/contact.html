@@ -1,0 +1,71 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+    <section class="Material-contact-section section-padding section-dark">
+      <div class="container mt-4">
+          <div class="row" style="color: white;">
+              <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                  <h1 class="section-title">Love to Hear From You</h1>
+              </div>
+          </div>
+          <div class="row" style="color: white;">
+              <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                <p>While we are good in fixing issues related to communications, yet you can communicate with us just by filling this simple form !!!</p>
+
+                <div class="find-widget">
+                 Owner : Yash Singh
+                </div>
+                <div class="find-widget">
+                 Address: H.NO. 60C, Shivpur Shahbajganj, Gorrakhpur, U.P. (273014)
+                </div>
+                <div class="find-widget">
+                  Phone: +91 9696943384
+                </div>
+                
+                <div class="find-widget">
+                  Linkedin:  <a href="https://www.linkedin.com/in/yash-singh-a52381196/">Click to Connect</a>
+                </div>
+                
+              </div>
+              <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                  <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                      <!-- Name -->
+                      <div class="form-group label-floating">
+                        <label class="control-label" for="name">Name</label>
+                        <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- email -->
+                      <div class="form-group label-floating">
+                        <label class="control-label" for="email">Email</label>
+                        <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- Subject -->
+                      <div class="form-group label-floating">
+                        <label class="control-label">Subject</label>
+                        <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      
+                      <div class="form-group label-floating">
+                          <label for="message" class="control-label">Message</label>
+                          <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
+                          <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="form-submit mt-5">
+                        <button class="btn btn-primary" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
+                        
+                    </div>
+                      
+                  </form>
+              </div>
+          </div>
+      </div>
+    </section>
+{% endblock content %}

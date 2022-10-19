@@ -1,0 +1,16 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'users/css/main.css' %}">
+    <div class="container cont">
+            <div class="row homerow">
+                <div class="col col-sm-12 col-md-8 col-xs-8 col-lg-8" id="header-text">
+                  <h1 id="header-h1">Repairzilla <br> Electronics Repair </h1>
+                  <p id="header-paragraph">Get Your Gadget Repaired at your Doorstep<br />A complete solution for all Electronics</p>
+                  <a href="{% url 'login' %}" class="btn" style="color: white; background-color: #fd5e14;"type="submit" id="body-link-row">Discover More</a>
+                </div>
+
+                <div class="col col-sm-12 col-md-4 col-xs-4 col-lg-4" id="header-image"><img src="{% static 'users/images/logo.png' %}" alt=""></div>
+              </div>
+    </div>
+{% endblock content %}
