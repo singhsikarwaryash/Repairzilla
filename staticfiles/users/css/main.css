@@ -1,5 +1,5 @@
 #bg{
-  background-image: url( '../images/bg.png' );
+  background-image: url('{{STATIC_URL}}users/images/bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
