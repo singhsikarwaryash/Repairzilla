@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from .forms import UserRegisterForm
+from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
 def home(request):
     return render(request, 'users/home.html')
+
+def service(request):
+    return render(request, 'users/service.html')
 
 
 def register(request):
@@ -21,6 +25,7 @@ def register(request):
         form = UserRegisterForm()
 
     return render(request, 'users/register.html', {'form': form})
+
 # def login(request):
 #     username = request.POST['username']
 #     password = request.POST['password']
