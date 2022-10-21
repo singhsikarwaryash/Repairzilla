@@ -27,16 +27,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xt7@b7-ob=o$$!8y5b+)mmyi=-zg)nrzo+ld&2gc!@zr1-sp+('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['repairzilla.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'repairzilla.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
-    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -141,9 +140,9 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = '/static/'
-STATIC_ROOT =[
- os.path.join(BASE_DIR,'staticfiles')
-]
+# STATIC_ROOT =[
+#  os.path.join(BASE_DIR,'staticfiles')
+# ]
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 django_heroku.settings(locals())
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
